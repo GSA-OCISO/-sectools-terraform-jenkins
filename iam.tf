@@ -81,6 +81,15 @@ resource "aws_iam_policy" "jenkins" {
     {
       "Effect": "Allow",
       "Action": [
+          "ecr:GetAuthorizationToken"
+      ],
+      "Resource": [
+          "*"
+      ]  
+    },    
+    {
+      "Effect": "Allow",
+      "Action": [
           "ecr:PutImageTagMutability",
           "ecr:StartImageScan",
           "ecr:ListTagsForResource",
